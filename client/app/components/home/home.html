@@ -1,0 +1,31 @@
+<navbar></navbar>
+<header>
+  <hero></hero>
+</header>
+<main>
+  <button type="button" class="btn btn-default" ng-click="$ctrl.open()">Open me!</button>
+  <div ng-class="{'has-error':!$ctrl.date.startDate || !$ctrl.date.endDate}">
+    <input style="width:12% !important" date-range-picker class="form-control date-picker" type="text" options="$ctrl.dateOptions" ng-model="$ctrl.date" min="'2014-02-23'"/>
+  </div>
+</main>
+<script type="text/ng-template" id="myModalContent.html">
+  <div class="modal-body" id="modal-body">
+    <h1>Welcome to appName</h1>
+    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <div style="height: 305px">
+      <div uib-carousel active="0" interval="15000" no-wrap="false" no-transition="false">
+        <div uib-slide ng-repeat="slide in this.slides track by slide.id" index="slide.id">
+          <img ng-src="{{this.slide.image}}" style="margin:auto;">
+          <div class="carousel-caption">
+            <h4>{{this.slide.header}}</h4>
+            <p>{{this.slide.text}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="this.ok()">Help Guide</button>
+    <button class="btn btn-warning" type="button" ng-click="this.cancel()">Close</button>
+  </div>
+</script>

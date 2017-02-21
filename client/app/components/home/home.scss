@@ -1,0 +1,44 @@
+.home {
+  color: red;
+}
+
+.homeScrollbarWrapper {
+  color:black;
+  margin:30px;
+  height:10vh;
+}
+
+.loader-opened {
+  font-size:16px;
+}
+
+.fa-chevron-left.glyphicon-chevron-left::before, .fa-chevron-right.glyphicon-chevron-right::before {
+  font-size:20px;
+  color:#158CBA;
+}
+
+.glyphicon-calendar::before {
+  content: '' !important;
+}
+
+.glyphicon-chevron-left::before {
+	content: '<' !important;
+  color: orange;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.glyphicon-chevron-right::before {
+	content: '>' !important;
+  color: orange;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+}
+
+.glyphicon {
+  font-family:unset !important;
+}

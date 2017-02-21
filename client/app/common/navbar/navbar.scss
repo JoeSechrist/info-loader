@@ -1,0 +1,23 @@
+@import '../common';
+
+.navbar {
+  height: 54px;
+  background-color: $primaryColor;
+  .nav-links,
+  .logo {
+    color: #f5f5f5;
+    padding: 18px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .logo {
+    color: $lightTextColor;
+    margin-right: 50%;
+  }
+
+  .nav-links span {
+    color: $lightTextColor;
+    font-size: 1.6rem;
+  }
+}
