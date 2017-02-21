@@ -14,7 +14,7 @@ let homeModule = angular.module('home', [
 
   $stateProvider
     .state('home', {
-      url: '/',
+      url: '/info-loader/',
       component: 'home'
     });
 })
