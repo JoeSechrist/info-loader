@@ -1,7 +1,7 @@
 {
-  "name": "ng6-starter",
+  "name": "info-loader",
   "version": "0.0.1",
-  "description": "Starter for Angular + ES6 + (Webpack or JSPM)",
+  "description": "",
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.0",
@@ -71,17 +71,6 @@
     "watch": "gulp serve",
     "webpack": "gulp webpack"
   },
-  "keywords": [
-    "angular",
-    "webpack",
-    "es6"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/angularclass/NG6-starter.git"
-  },
-  "author": "AngularClass",
-  "license": "Apache-2.0",
   "babel": {
     "plugins": [
       "transform-runtime"
