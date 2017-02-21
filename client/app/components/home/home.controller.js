@@ -7,7 +7,7 @@ class HomeController {
     this.animationsEnabled = true;
     this.$uibModal = $uibModal;
     this.$log = $log;
-    this.date = { startDate: moment().subtract(1,'month'), endDate: moment() };
+    this.date = { startDate: moment().subtract(1, 'month'), endDate: moment() };
     this.dateOptions = {
       locale: {
         applyLabel: "Apply",
@@ -49,13 +49,19 @@ class HomeController {
         $scope.noWrapSlides = false;
         $scope.active = 0;
         $scope.test = 'test';
+        var imageUrls = [];
+        if (window.location.href.split('github').length > 1) {
+          imageUrls.push('../info-loader/assets/300.jpeg', '../info-loader/assets/400.jpeg')
+        } else {
+          imageUrls.push('./assets/300.jpeg', './assets/400.jpeg')
+        }
         var currIndex = 0;
         var slides = $scope.slides = [];
         for (var i = 0; i < 2; i++) {
           $scope.slides.push(
             {
               header: ['First picture header', 'Second picture header'][slides.length % 2],
-              image: ['./assets/300.jpeg', './assets/400.jpeg'][slides.length % 2],
+              image: imageUrls[slides.length % 2],
               text: ['Short description of picture', 'Point by point explanation of picture', 'That is so cool', 'I love that'][slides.length % 2],
               id: currIndex++
             }
