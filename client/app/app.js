@@ -9,7 +9,7 @@ import 'bootstrap-daterangepicker/daterangepicker.css';
 import bootstrapdate from 'bootstrap-daterangepicker/daterangepicker';
 import daterangepicker from 'angular-daterangepicker';
 
-import 'normalize.css';
+// import 'normalize.css';
 window.moment = moment;
 
 angular.module('app', [

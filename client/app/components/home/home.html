@@ -3,15 +3,41 @@
   <hero></hero>
 </header>
 <main>
-  <button type="button" class="btn btn-default" ng-click="$ctrl.open()">Open me!</button>
-  <div ng-class="{'has-error':!$ctrl.date.startDate || !$ctrl.date.endDate}">
-    <input style="width:12% !important" date-range-picker class="form-control date-picker" type="text" options="$ctrl.dateOptions" ng-model="$ctrl.date" min="'2014-02-23'"/>
+  <div class="col-xs-4" style="font-size:14px">
+    <div style="margin:20px" class="well">
+      <form class="form-horizontal">
+        <fieldset style="border:0px !important">
+          <legend>Inputs</legend>
+          <div class="form-group">
+            <label for="inputDateRange" class="col-xs-2 control-label">Date</label>
+            <div ng-class="{'has-error':!$ctrl.date.startDate || !$ctrl.date.endDate}" class="col-xs-10">
+              <input id="inputDateRange" date-range-picker class="form-control date-picker" type="text" options="$ctrl.dateOptions" ng-model="$ctrl.date"
+                min="'2014-02-23'" />
+              <!-- style="width:12% !important" -->
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-10 col-xs-offset-2">
+              <button class="btn btn-default">Clear</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-info" ng-click="$ctrl.open()">Help</button>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Filters</legend>
+        </fieldset>
+      </form>
+    </div>
   </div>
 </main>
 <script type="text/ng-template" id="myModalContent.html">
   <div class="modal-body" id="modal-body">
     <h1>Welcome to appName</h1>
-    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <div style="height: 305px">
       <div uib-carousel active="0" interval="15000" no-wrap="false" no-transition="false">
         <div uib-slide ng-repeat="slide in this.slides track by slide.id" index="slide.id">

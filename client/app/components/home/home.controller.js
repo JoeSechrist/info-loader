@@ -37,6 +37,7 @@ class HomeController {
       ariaDescribedBy: 'modal-body',
       templateUrl: 'myModalContent.html',
       openedClass: 'loader-opened',
+      size: 'lg',
       controller: function ($scope, $uibModalInstance, items) {
         'ngInject';
 
@@ -77,7 +78,6 @@ class HomeController {
           $uibModalInstance.dismiss('cancel');
         }
       },
-      size: size,
       appendTo: parentElem,
       resolve: {
         items: function () {
